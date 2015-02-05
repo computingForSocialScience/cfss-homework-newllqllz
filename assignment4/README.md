@@ -89,6 +89,8 @@ script.sh` at the shell prompt.)
 1. Print out how many rows are in the dataset. (consider using `wc -l`)
 2. Find all rows with the string "Hyde Park" in them and save them into a new file called `permits_hydepark.csv`. (consider using `grep` and the `>` operator)
 
+//bash -o igncr script.sh
+
 Add this script to git by using the commands above (`git add`/`git commit`) but with different arguments. 
 
 
@@ -122,3 +124,10 @@ origin master` (to get any changes from origin/master, i.e. github)
 and then `git push origin master` to send your changes back. Unless we
 hear otherwise from you, **we will be grading the last version of your
 assignment that was committed to github before the deadline**!
+
+
+//////////////////
+cat ~/.bashrc
+python -i parse.py arg1 arg2
+./python -i
+find . -name python*
