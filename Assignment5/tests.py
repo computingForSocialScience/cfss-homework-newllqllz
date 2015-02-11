@@ -1,7 +1,7 @@
 # coding=utf-8
 
 import unittest
-import nose
+import nose  #import nose to test
 from fetchArtist import fetchArtistId, fetchArtistInfo
 from fetchAlbums import fetchAlbumIds, fetchAlbumInfo
 from csvUtils import writeArtistsTable, writeAlbumsTable
@@ -15,7 +15,7 @@ def testFetchArtistInfo():
     assert fetchArtistInfo('6UE7nl9mha6s8z0wFQFIZ2')['genres'] == [u'europop']
 
 def testFetchAlbums():
-    assert len(fetchAlbumIds('57anmI1X2hXWPrNagFdzZr')) == 10
+    assert len(fetchAlbumIds('57anmI1X2hXWPrNagFdzZr')) == 9
 
 def testFetchAlbumInfo():
     albumInfo = fetchAlbumInfo('24geHauG3JIbpyf9CRiuvf')
@@ -66,4 +66,4 @@ def testWriteArtistsInfo():
 
 
 if __name__ == '__main__':
-    nose.main()
+    nose.main()   #test all functions
