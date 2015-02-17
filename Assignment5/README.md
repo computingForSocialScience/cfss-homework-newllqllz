@@ -210,7 +210,7 @@ which:
 ## Part 6. Testing
 
 Unit testing is today a fundamental part of code design and
-development. The goal of testing is to assure yourself
+development. The goal of testing is t】o assure yourself
 that you have implemented a function in
 the way you expect it to behave (or that you haven't broken anything in the last
 round of changes). In this assignment, we have

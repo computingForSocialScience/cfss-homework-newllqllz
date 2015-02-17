@@ -40,7 +40,7 @@ def writeAlbumsTable(album_info_list):
     The csv file should have a header line that looks like this:
     ARTIST_ID,ALBUM_ID,ALBUM_NAME,ALBUM_YEAR,ALBUM_POPULARITY
     """
-    outFile=open('F:\\cfss\\cfss-homework-newllqllz\\assignment5\\albums.csv','w',encoding='utf-8')
+    outFile=open('F:\\cfss\\cfss-homework-newllqllz\\assignment5\\albums.csv','a',encoding='utf-8')  #append to what has been down
 
     outFile.write(u'ARTIST_ID,ALBUM_ID,ALBUM_NAME,ALBUM_YEAR,ALBUM_POPULARITY\n')
     #writer.writerow(filed_names)  #write the first column
