@@ -1,0 +1,18 @@
+Proposal 
+Linzhuo Li
+StuID: 445739
+
+1. "What":
+	I plan to design a program for visualizing and analyzing the semantic networks of people's narratives. By "semantic network" I mean just a map of keywords and their linkages among each other due to their cooccurences in a sentence/paragraph/article. The program should get the input of a narrative, and the output should be a network graph showing ties between keywords and a bunch of statistics. The program should also allow comparing the semantic networks of different narratives. For example, given the input of two narratives on different topics from a person A , the program should show two network graphs as the same time and allow users to see how much they overlap, what are the "broker" nodes of the two networks...
+	The program should also be able to aggregate any given number of semantic networks(say, maps of keywords from narratives about "Democracy" given by 1000 people ) into one and visualize it.
+ 
+2. "Why"
+	The reason I want to design such a program is due to my research interest in understanding the relations between people's understandings about domestic politcial issues and their understandings about political issues in other countries. More theoretically, I want to see how our political knowledge about one social cage(the one we live in) can be related with that of other social cages. I think using semantic networks to study the topology of how people interpret/reason/theorize issues, though far from enough, can at least help push my understandings forward.
+	And the reason why I am interested in this issue is due to a story I heard when I was an undergraduate: in a survey, a peasant living in a small villiage in West China was asked to give one issue that concerned him most. He thought for a while, and instead of giving answers like "whether the price of agricultural products will rise", he said "I was wondering, whether the war between the U.S. and Iraq would really happen", quite seriously. This story makes me wonder why people would care about far away issues that are totally outside of their own world, how they can be thinking about far away issues, and how their "local knowledge" can interact with "far away knowledge"
+
+3. "How"
+	computational steps:
+	0. data source: a quora-like Chinese website where Chinese young people give their answers to different questions, many of which about related to politics. 
+	1. use web scaping to get data of "two parts of people's knowledge"--a bi-list of narratives about domestic political issues and similar issues in other countries from online forum. For each person get his profiles. 
+	2. generating semantic networks
+	3. visualizing and network analysis
