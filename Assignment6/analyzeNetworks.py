@@ -15,22 +15,29 @@ def readEdgeList(filename):
 
 def degree(edgeList, in_or_out):
 	if in_or_out =='in':
-		print edgeList['1'].value_counts()
+		return edgeList['1'].value_counts()
 	elif in_or_out=='out':
-		print edgeList['0'].value_counts()
+		return edgeList['0'].value_counts()
 	else:
 		print "Parameters wrong, you should type in either 'in' or 'out' "
+		return False
 
-def combineEdgelists(edgeList1, edgeList2):
-	edgeList = edgeList1.append(edgeList2)
+def combineEdgeLists(edgeList1, edgeList2):
+	print type(edgeList1)
+	#print "sssss"
+	print type(edgeList2)
+	edgeList = pd.concat([edgeList1, edgeList2], ignore_index=True)
+	print "combined-----"
+	print edgeList
 	edgeList = edgeList.drop_duplicates()
 	return edgeList
 
 def pandasToNetworkX(edgeList):
-	edgeRecords = edgeList.to_records(index=False) #list-like object containing tuples
+	edgeRecords = edgeList.to_records() #list-like object containing tuples
+	print edgeRecords
 	#print edgeRecords
 	G = nx.DiGraph()
-	for sender,receiver in edgeRecords:
+	for index, sender,receiver in edgeRecords:
 		G.add_edge(sender,receiver,count=1)
 	#print len(G.nodes())
 	return G

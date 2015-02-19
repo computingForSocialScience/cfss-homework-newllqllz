@@ -62,4 +62,4 @@ def writeEdgeList(artistID, depth, filename):
 #print len(getDepthEdges('2mAFHYBasVVtMekMUkRO9g',1))
 #print getEdgeList('2mAFHYBasVVtMekMUkRO9g',2)
 
-writeEdgeList('2mAFHYBasVVtMekMUkRO9g',2,'F:\\cfss\\cfss-homework-newllqllz\\Assignment6\\edgeData.csv')
+#writeEdgeList('2mAFHYBasVVtMekMUkRO9g',2,'F:\\cfss\\cfss-homework-newllqllz\\Assignment6\\edgeData.csv')

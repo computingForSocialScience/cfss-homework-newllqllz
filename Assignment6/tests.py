@@ -113,6 +113,9 @@ def testMakePlaylist():
     # check the number of columns
     # (the column count can get messed up if you don't
     # put your artist/album/track names in quotes)
+    #print sum([len(r) for r in rows]) 
+    for r in rows:
+        print len(r)
     assert sum([len(r) for r in rows]) == 90
         
 
