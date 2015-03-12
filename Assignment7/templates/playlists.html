@@ -1,0 +1,9 @@
+<html>
+<body>
+<ul>
+{% for key,name in playlists.items() %}
+<li><a href = "/playlists/{{key}}">{{name}}</a>
+{% endfor %}
+</ul>
+</body>
+</html>
