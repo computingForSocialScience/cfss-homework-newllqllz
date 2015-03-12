@@ -9,7 +9,7 @@ import random
 dbname="playlists"
 host="localhost"
 user="root"
-passwd="llz2.2360679"
+passwd=""
 db=pymysql.connect(db=dbname, host=host, user=user,passwd=passwd, charset='utf8')
 
 app = Flask(__name__)
@@ -36,6 +36,13 @@ def make_playlists_resp():
 
 @app.route('/playlist/<playlistId>')
 def make_playlist_resp(playlistId):
+    cur = db.cursor()
+    sql = "SELECT songOrder,artistName,albumName,trackName FROM songs WHERE playlistId = %s ;" #
+    cur.execute(sql,playlistId)
+    songs=[]
+    for item in cur.fetchall():
+        print item
+        songs.append(item)
     return render_template('playlist.html',songs=songs)
 
 
@@ -114,6 +121,12 @@ def createNewPlaylist(artist_name):
 
 
 if __name__ == '__main__':
+    # cur = db.cursor()
+    # sql = "SELECT songOrder,artistName,albumName,trackName FROM songs ;" #WHERE playlistId = %s
+    # cur.execute(sql)
+    # songs=[]
+    # for item in cur.fetchall():
+    #     print item
     app.debug=True
     app.run()
     #createNewPlaylist("Beyonce")
