@@ -1,0 +1,35 @@
+
+<html>
+<head><title>Democracy</title>
+
+    <link rel="stylesheet" href="http://cdn.pydata.org/bokeh-0.7.1.min.css" type="text/css" />
+    <script type="text/javascript" src="http://cdn.pydata.org/bokeh-0.7.1.min.js"></script>
+
+    {{ figJS|safe }}
+</head>
+<body>
+
+        
+        <h4>{{name}}---this page tells you what are the most frequently used concepts when Chinese young adults discuss democracy related issues in {{name}} (data from <a href="http://www.zhihu.com/topic/19561754">zhihu</a>)</h4>
+        <table>
+            <tr> keywords</tr>
+            <tr> frequency</tr>
+
+        {% for item in keywords_dic.items() %}
+            <tr>
+                <td>{{item[0]}}</td>
+                <td>{{item[1]}}</td>
+            </tr>>
+        {% endfor %}
+        </table>
+
+        {{ figDiv|safe }}
+
+       
+        
+        <img src="file:///F:/cfss/cfss-homework-newllqllz/final_project/templates/{{name}}.png">
+        
+        
+
+</body>
+</html>
