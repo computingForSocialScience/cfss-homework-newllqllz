@@ -143,13 +143,7 @@ def make_country_resp(name):
 	width=[]
 	for (u,v,d) in G1.edges(data=True):
 		width.append(d.values()[0])
-	nx.draw_networkx_nodes(G1,pos,node_color='white',node_size=1200)
-	nx.draw_networkx_edges(G1,pos,edgelist=elarge,width=width)
-	nx.draw_networkx_edges(G1,pos,edgelist=esmall,width=width,alpha=0.5,edge_color='b',style='dashed')
-	nx.draw_networkx_labels(G1,pos,font_size=10,font_family='sans-serif')
-	#f2="F:\\cfss\\cfss-homework-newllqllz\\final_project\\templates\\"+name+".png"
-	#f = tempfile.NamedTemporaryFile(dir='static/temp',suffix='.png',delete=False)
-	#plt.savefig(f2)
+	
 
 	frequency_list=[]
 	for value in keywords_dic_en.values():
@@ -159,7 +153,14 @@ def make_country_resp(name):
 	p.quad(top=heights,bottom=0,left=edges[:-1],right=edges[1:],fill_color="orange",line_color="black")
 	figJS,figDiv = components(p,CDN)
 
-
+	nx.draw_networkx_nodes(G1,pos,node_color='white',node_size=1200)
+	nx.draw_networkx_edges(G1,pos,edgelist=elarge,width=width)
+	nx.draw_networkx_edges(G1,pos,edgelist=esmall,width=width,alpha=0.5,edge_color='b',style='dashed')
+	nx.draw_networkx_labels(G1,pos,font_size=10,font_family='sans-serif')
+	f2="F:\\cfss\\cfss-homework-newllqllz\\final_project\\static\\"+name+".png"
+	#f = tempfile.NamedTemporaryFile(dir='static/temp',suffix='.png',delete=False)
+	plt.savefig(f2)
+	plt.clf()
 
 	return render_template('keywords.html',keywords_dic=keywords_dic_en,figJS=figJS,figDiv=figDiv,name=name)#figJS=figJS,figDiv=figDiv
 
